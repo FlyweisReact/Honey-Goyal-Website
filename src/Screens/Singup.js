@@ -12,7 +12,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
 const Singup = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [modalShow, setModalShow] = React.useState(false);
   const [email, setEmail] = useState("");
 
@@ -20,11 +20,11 @@ const Singup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/web/signup",
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/signup",
         { email }
       );
-      alert(`Your Otp is ${data.details.otp}`)
-      setModalShow(true)
+      alert(`Your Otp is ${data.details.otp}`);
+      setModalShow(true);
     } catch (err) {
       alert(err.response.data.message);
     }
@@ -32,21 +32,22 @@ const Singup = () => {
 
   // Otp Verify
   function MyVerticallyCenteredModal(props) {
-
-    const [ otp , setOtp ] = useState("")
+    const [otp, setOtp] = useState("");
 
     const Verifyotp = async (e) => {
-      e.preventDefault()
-      try{
-          const { data } = await axios.post("http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/web/verify" , {otp})
-          alert(data.message)
-          props.onHide()
-          navigate('/signIn')
-          
-      }catch(err){
-        console.log(err)
+      e.preventDefault();
+      try {
+        const { data } = await axios.post(
+          "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/verify",
+          { otp }
+        );
+        alert(data.message);
+        props.onHide();
+        navigate("/signIn");
+      } catch (err) {
+        console.log(err);
       }
-    }
+    };
     return (
       <Modal
         {...props}
@@ -63,25 +64,31 @@ const Singup = () => {
           <Form onSubmit={Verifyotp}>
             <Form.Group className="mb-3">
               <Form.Label>OTP</Form.Label>
-              <Form.Control type="number" onChange={(e) => setOtp(e.target.value)} />
+              <Form.Control
+                type="number"
+                onChange={(e) => setOtp(e.target.value)}
+              />
             </Form.Group>
             <Button
               type="submit"
-              style={{ backgroundColor: "#407bff", borderRadius: "0"  , width : '200px'}}
+              style={{
+                backgroundColor: "#407bff",
+                borderRadius: "0",
+                width: "200px",
+              }}
             >
               Verify
             </Button>{" "}
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
+        <Modal.Footer></Modal.Footer>
       </Modal>
     );
   }
 
   return (
     <>
-        <MyVerticallyCenteredModal
+      <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
@@ -94,10 +101,16 @@ const Singup = () => {
             to access us{" "}
           </p>
           <form onSubmit={SignUp}>
-          <input type="text" placeholder="Enter your  Email Address" onChange={(e) => setEmail(e.target.value)} />
-          <button className="signinBtn" type='submit'>NEXT</button>
+            <input
+              type="text"
+              placeholder="Enter your  Email Address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button className="signinBtn" type="submit">
+              NEXT
+            </button>
           </form>
-      
+
           <p
             style={{ textAlign: "center", fontSize: "1.2rem", marginTop: "2%" }}
           >

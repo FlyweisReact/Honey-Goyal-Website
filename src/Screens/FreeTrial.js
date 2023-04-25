@@ -9,7 +9,6 @@ import Whatsapp from "../Images/Whatsapp.png";
 import Location from "../Images/Location.png";
 import axios from "axios";
 
-
 const FreeTrial = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,15 +22,15 @@ const FreeTrial = () => {
   const [state, setState] = useState("");
 
   const Trial = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/company",
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/company",
         { name, email, password, mobile, country, state }
       );
-      alert("Account Created Successfully")
+      alert("Account Created Successfully");
     } catch (err) {
-      alert(err.response.data.message)
+      alert(err.response.data.message);
     }
   };
 
@@ -51,27 +50,52 @@ const FreeTrial = () => {
           <form onSubmit={Trial}>
             <div>
               <img src={img1} alt="" />
-              <input type={"text"} placeholder="Company name "  onChange={(e) => setName(e.target.value)}/>
+              <input
+                type={"text"}
+                placeholder="Company name "
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div>
               <img src={Mail} alt="" />
-              <input type={"email"} placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} />
+              <input
+                type={"email"}
+                placeholder="Email Address"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div>
               <img src={Whatsapp} alt="" />
-              <input type={"tel"} pattern='[0-9]{10}' placeholder="Mobile Number" onChange={(e) => setMobile(e.target.value)} />
+              <input
+                type={"tel"}
+                pattern="[0-9]{10}"
+                placeholder="Mobile Number"
+                onChange={(e) => setMobile(e.target.value)}
+              />
             </div>
             <div>
               <img src={password} alt="" />
-              <input type={"password"} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+              <input
+                type={"password"}
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div>
               <img src={Location} alt="" />
-              <input type={"text"} placeholder="India" onChange={(e) => setCountry(e.target.value)} />
+              <input
+                type={"text"}
+                placeholder="India"
+                onChange={(e) => setCountry(e.target.value)}
+              />
             </div>
             <div>
               <img src={Location} alt="" />
-              <input type={"text"} placeholder="Uttar Pradesh" onChange={(e) => setState(e.target.value)} />
+              <input
+                type={"text"}
+                placeholder="Uttar Pradesh"
+                onChange={(e) => setState(e.target.value)}
+              />
             </div>
             <div style={{ display: "flex", gap: "5%" }}>
               <input
@@ -82,7 +106,9 @@ const FreeTrial = () => {
                 I agree to the terms of services & Privacy policy
               </p>
             </div>
-            <button style={{ marginTop: "3%" }} type='submit'>Create account </button>
+            <button style={{ marginTop: "3%" }} type="submit">
+              Create account{" "}
+            </button>
           </form>
         </div>
       </div>

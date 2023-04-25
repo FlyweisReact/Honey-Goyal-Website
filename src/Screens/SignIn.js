@@ -10,18 +10,18 @@ import { Link, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate("")
+  const navigate = useNavigate("");
 
   const SignIn = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/web/login",
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/login",
         { email }
       );
-          alert(data.message)
-          localStorage.setItem("Email" , data.data.email)
-            navigate('/')
+      alert(data.message);
+      localStorage.setItem("Email", data.data.email);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -48,9 +48,9 @@ const SignIn = () => {
             </button>
           </form>
 
-        <Link to='/forgetPassword'>
-          <p className="forget">Forgot Password ?</p>
-        </Link>
+          <Link to="/forgetPassword">
+            <p className="forget">Forgot Password ?</p>
+          </Link>
           <p style={{ textAlign: "center", fontSize: "1.2rem" }}>OR</p>
           <div>
             <div className="sing">

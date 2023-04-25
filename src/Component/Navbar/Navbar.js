@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -19,7 +19,7 @@ const Navbar = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/admin/sales/all"
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {
@@ -36,77 +36,104 @@ const Navbar = () => {
         <div className="mid">
           <p>LOGO and Company name</p>
           <ul>
-            <Dropdown className="dropDownBtn" style={{marginTop : '0px'}}>
-                  <Dropdown.Toggle
-                    variant="none"
-                    id="dropdown-basic"
-                    className="dropdownBtn-toggle"
+            <Dropdown className="dropDownBtn" style={{ marginTop: "0px" }}>
+              <Dropdown.Toggle
+                variant="none"
+                id="dropdown-basic"
+                className="dropdownBtn-toggle"
+              >
+                Inventory
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+                className="dropdownBtn-Menu"
+                style={{ maxHeight: "600px", overflow: "scroll" }}
+              >
+                <div className="upperDiv">
+                  <div>
+                    <img
+                      src={arrow}
+                      alt=""
+                      style={{ height: "10px", marginTop: "10px" }}
+                    />
+                  </div>
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      border: "none",
+                      color: "#fff",
+                      fontSize: "20px",
+                    }}
                   >
                     Inventory
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu
-                    className="dropdownBtn-Menu"
-                    style={{ maxHeight: "600px", overflow: "scroll" }}
+                  </p>
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      border: "none",
+                      color: "#fff",
+                    }}
                   >
-                    <div className="upperDiv">
-                      <div>
-                        <img
-                          src={arrow}
-                          alt=""
-                          style={{ height: "10px", marginTop: "10px" }}
-                        />
-                      </div>
-                      <p style={{backgroundColor : "transparent"  , border : 'none' , color : '#fff' , fontSize : '20px'}}>Inventory</p>
-                      <p style={{backgroundColor : "transparent"  , border : 'none' , color : '#fff'}}>+</p>
-                    </div>
+                    +
+                  </p>
+                </div>
 
-                    <div className="midDiv">
-                      <p>All</p>
-                      <p>Open</p>
-                      <p>Order </p>
-                      <p>Cancelled </p>
-                      <p>Invoice</p>
-                    </div>
+                <div className="midDiv">
+                  <p>All</p>
+                  <p>Open</p>
+                  <p>Order </p>
+                  <p>Cancelled </p>
+                  <p>Invoice</p>
+                </div>
 
-                    {sales?.details?.map((i, index) => (
-                      <Dropdown.Item key={index} >
-                        <div className="SalesDiv">
-                          <i class="fa-solid fa-ellipsis-vertical setting"></i>
-                          <p style={{ fontSize: "18px", fontWeight: "400" , backgroundColor : 'transparent' , border : 'none' , left : '0px' }} >
-                            {i.name}
-                          </p>
-                          <span
-                            style={{
-                              fontSize: "20px",
-                              fontWeight: "600",
-                              position: "absolute",
-                              right: "40px",
-                            }}
-                          >
-                            ₹{i.amount}
-                          </span>
-                          <br />
-                          <span style={{ fontSize: "12px" }}>
-                            Invoice no. : 1234500 <br />
-                            {i.salesType}
-                          </span>
-                          <p
-                            style={{
-                              fontSize: "20px",
-                              color: "red",
-                              fontWeight: "400",
-                              textAlign: "right",
-                              marginRight: "30px",backgroundColor : 'transparent' , border : 'none'
-                            }}
-                          >
-                            {i.status}
-                          </p>
-                        </div>
-                      </Dropdown.Item>
-                    ))}
-                  </Dropdown.Menu>
-                </Dropdown>
-           
+                {sales?.details?.map((i, index) => (
+                  <Dropdown.Item key={index}>
+                    <div className="SalesDiv">
+                      <i class="fa-solid fa-ellipsis-vertical setting"></i>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "400",
+                          backgroundColor: "transparent",
+                          border: "none",
+                          left: "0px",
+                        }}
+                      >
+                        {i.name}
+                      </p>
+                      <span
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          position: "absolute",
+                          right: "40px",
+                        }}
+                      >
+                        ₹{i.amount}
+                      </span>
+                      <br />
+                      <span style={{ fontSize: "12px" }}>
+                        Invoice no. : 1234500 <br />
+                        {i.salesType}
+                      </span>
+                      <p
+                        style={{
+                          fontSize: "20px",
+                          color: "red",
+                          fontWeight: "400",
+                          textAlign: "right",
+                          marginRight: "30px",
+                          backgroundColor: "transparent",
+                          border: "none",
+                        }}
+                      >
+                        {i.status}
+                      </p>
+                    </div>
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+
             <li onClick={() => navigate("/mail")}>MAIL</li>
             <li>PROJECTS</li>
             <li>
@@ -189,7 +216,6 @@ const Navbar = () => {
                     style={{
                       color: "#0B0B95",
                       border: "1px solid white",
-                    
                     }}
                     onClick={() => {
                       localStorage.removeItem("Email");
@@ -207,7 +233,6 @@ const Navbar = () => {
                       style={{
                         color: "#0B0B95",
                         border: "1px solid white",
-                  
                       }}
                       onClick={() => navigate("/signIn")}
                     >

@@ -21,7 +21,7 @@ const Hero = () => {
   const getCustomer = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/web/customer"
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/customer"
       );
       setCustomer(data);
     } catch (err) {
@@ -32,7 +32,7 @@ const Hero = () => {
   const getSupplier = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/web/supplier"
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/supplier"
       );
       setSupllier(data);
     } catch (err) {
@@ -43,7 +43,7 @@ const Hero = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:4000/api/v1/admin/sales/all"
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {
@@ -69,7 +69,6 @@ const Hero = () => {
               </span>
             </p>
           </div>
-        
 
           <div>
             <ul>
@@ -229,7 +228,7 @@ const Hero = () => {
                     </div>
 
                     {sales?.details?.map((i, index) => (
-                      <Dropdown.Item key={index} >
+                      <Dropdown.Item key={index}>
                         <div className="SalesDiv">
                           <i class="fa-solid fa-ellipsis-vertical setting"></i>
                           <p style={{ fontSize: "18px", fontWeight: "400" }}>
