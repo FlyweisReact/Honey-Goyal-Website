@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
 
-function App() {
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ChartScreen from "./Screens/ChartScreen";
+import FreeTrial from "./Screens/FreeTrial";
+import HomeScreen from "./Screens/HomeScreen";
+import SignIn from "./Screens/SignIn";
+import Singup from './Screens/Singup'
+import './index.css'
+import Mail from "./Screens/Mail";
+import ForgetPassword from "./Screens/ForgetPassword";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+        
+          <Route path="/" element={<HomeScreen />} />
+          <Route path='/trial' element={<FreeTrial />} />
+          <Route path="/chart" element={<ChartScreen />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/singup" element={<Singup />} />
+          <Route path="/mail" element={<Mail />} />
+
+          <Route path="/forgetPassword" element={<ForgetPassword />} />
+
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
