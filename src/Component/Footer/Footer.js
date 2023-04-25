@@ -9,8 +9,11 @@ import { Modal } from "react-bootstrap";
 
 const Footer = () => {
   const [modalShow, setModalShow] = useState(false);
-  const [ termModal , setTermModal ] = useState(false)
+  const [termModal, setTermModal] = useState(false);
+  const [refundModal, setRefundModal] = useState(false);
+  const [disclaimerModal, setDisclaimerModal] = useState(false);
 
+  // Privacy Policy
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -26,78 +29,218 @@ const Footer = () => {
         </Modal.Header>
         <Modal.Body>
           <p>
-            We keep the Application and Website (together referred to as
-            “Platform”) up and running and free of annoyances. But we make no
-            promises that we will succeed. THE COMPANY IS PROVIDED “AS IS” AND
-            “AS AVAILABLE” BASIS AND TO THE EXTENT PERMITTED BY LAW WITHOUT
-            WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT
-            NOT LIMITED TO, IMPLIED WARRANTIES FOR A PARTICULAR PURPOSE, TITLE,
-            AND NON-INFRINGEMENT. IN ADDITION, WHILE THE COMPANY ATTEMPTS TO
-            PROVIDE A GOOD USER EXPERIENCE, WE DO NOT REPRESENT OR WARRANT THAT:
-            (A) THE PLATFORM WILL ALWAYS BE SECURE AND ERROR- FREE, (B) THE
-            PLATFORM WILL ALWAYS FUNCTION WITHOUT DELAYS, DISRUPTIONS, OR
-            IMPERFECTIONS; OR (C) THAT ANY CONTENT, USER CONTENT, OR INFORMATION
-            YOU OBTAIN ON OR THROUGH THE PLATFORM WILL BE TIMELY OR ACCURATE.
-            YOU UNDERSTAND AND AGREE THAT YOU MAY BE EXPOSED TO CONTENT THAT
-            MIGHT BE OFFENSIVE, ILLEGAL, MISLEADING, OR OTHERWISE INAPPROPRIATE,
-            NONE OF WHICH THE COMPANY WILL BE RESPONSIBLE FOR. THE COMPANY WILL
-            NOT BE RESPONSIBLE FOR ANY DAMAGE SUFFERED BY USERS FROM THE USE OF
-            THE PLATFORM PROVIDED ON THE SERVICES AVAILABLE ON THE PLATFORM OR
-            THE CONTENT ON THIS PLATFORM. THIS INCLUDES BUT IS NOT LIMITED TO
-            LOSS OF REVENUE/DATA RESULTING FROM DELAYS, AS MAY OCCUR BECAUSE OF
-            ANY ACT/OMISSION OF PARTIES. THIS DISCLAIMER OF LIABILITY ALSO
-            APPLIES TO ANY DAMAGES OR INJURY CAUSED BY ANY FAILURE OF
-            PERFORMANCE, ERROR, OMISSION, INTERRUPTION, DELETION, DEFECTS,
-            DELAYS IN OPERATION OR TRANSMISSION, COMPUTER VIRUSES, COMMUNICATION
-            LINE FAILURE, THEFT OR DESTRUCTION OR UNAUTHORIZED ACCESS TO,
-            ALTERATION OF, OR USE OF RECORDS, WHETHER FOR BREACH OF CONTRACT,
-            TORTUOUS BEHAVIOUR, NEGLIGENCE, OR UNDER ANY OTHER CAUSE OF ACTION.
-            THE COMPANY ALSO MAKES IT CLEAR THAT IT SHALL NOT BE HELD LIABLE FOR
-            ANY DAMAGE/HURT/INCONVENIENCE CAUSED TO THE USER THROUGH THE COURSE
-            OF USAGE OF THE PLATFORM AND/OR CONTENT OR AS A RESULT OF THE USERS’
-            ACTIONS. THE COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO
-            THE CONDUCT OF THE USERS. THE CONTENT ON THE PLATFORM ARE INTENDED
-            TO BE SUBJECT TO AVAILABILITY, WITHOUT ANY PROMISES OR GUARANTEES ON
-            THE SAME BY THE COMPANY OR BY THE PLATFORM. WHILE CERTAIN
-            INFORMATION AVAILABLE ON THE PLATFORM IS THE PROPERTY OF THE COMPANY
-            AND THE COMPANY ENDEAVOURS TO KEEP THE SAID INFORMATION UPDATED AND
-            ACCURATE, THE COMPANY SHALL NOT MAKE NO REPRESENTATIONS OR
-            WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ABOUT THE COMPLETENESS,
-            ACCURACY, RELIABILITY, SUITABILITY OR AVAILABILITY WITH RESPECT TO
-            THE PLATFORM OR THE INFORMATION, OR RELATED GRAPHICS CONTAINED ON
-            THE PLATFORM FOR ANY PURPOSE. ANY RELIANCE YOU PLACE ON SUCH
-            INFORMATION IS, THEREFORE STRICTLY AT YOUR OWN RISK. THE COMPANY
-            BEARS NO RESPONSIBILITY WHATSOEVER FOR ANY CONSEQUENCES ARISING FROM
-            THE USE OF THE PLATFORM BY USERS. THE USE OF THE PLATFORM IS THE
-            SOLE RESPONSIBILITY OF THE USER (OR LEGALLY AUTHORISED PERSON ON
-            BEHALF OF THE USER), AND IN CASE OF ANY NEGLIGENCE ON THE PART OF
-            THE USER IN ACTING ON THE SAME SHALL NOT BE CONSTRUED AS IMPOSING
-            ANY LIABILITY, DIRECT OR INDIRECT, ON THE COMPANY/PLATFORM. THE
-            COMPANY SHALL DISCLAIM ALL RESPONSIBILITY AND OWNS NO LIABILITY TO
-            USERS FOR ANY OUTCOME (INCIDENTAL, DIRECT, INDIRECT OR OTHERWISE)
-            FROM THE USE OF THE PLATFORM. IN NO EVENT WILL THE COMPANY BE LIABLE
-            FOR ANY LOSS OR DAMAGE, INCLUDING, WITHOUT LIMITATION, INDIRECT OR
-            CONSEQUENTIAL LOSS OR DAMAGE, OR ANY LOSS OR DAMAGE WHATSOEVER
-            ARISING FROM LOSS OF DATA OR PROFITS ARISING OUT OF, OR IN
-            CONNECTION WITH, THE USE OF THE PLATFORM. THROUGH THIS PLATFORM, YOU
-            ARE ABLE TO LINK TO OTHER PLATFORMS WHICH IS NOT UNDER THE
-            COMPANY&#39;S CONTROL. WE HAVE NO CONTROL OVER THE NATURE, CONTENT
-            AND AVAILABILITY OF THOSE SITES. THE INCLUSION OF ANY LINKS DOES NOT
-            NECESSARILY IMPLY A RECOMMENDATION OR ENDORSE THE VIEWS EXPRESSED
-            WITHIN THEM. EVERY EFFORT IS MADE TO KEEP THE PLATFORM &amp;
-            PLATFORM UP AND RUNNING SMOOTHLY. HOWEVER, THE COMPANY TAKES NO
-            RESPONSIBILITY FOR, AND WILL NOT BE LIABLE FOR, THE PLATFORM BEING
-            TEMPORARILY UNAVAILABLE DUE TO TECHNICAL ISSUES BEYOND OUR CONTROL.
-            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COMPANY WILL
-            HAVE NO LIABILITY RELATED TO USER CONTENT ARISING UNDER INTELLECTUAL
-            PROPERTY RIGHTS, LIBEL, PRIVACY, PUBLICITY, OBSCENITY OR OTHER LAWS.
-            THE PLATFORM ALSO DISCLAIMS ALL LIABILITY WITH RESPECT TO THE
-            MISUSE, LOSS, MODIFICATION OR UNAVAILABILITY OF ANY USER CONTENT.
-            THE USER UNDERSTANDS AND AGREES THAT ANY MATERIAL OR DATA DOWNLOADED
-            OR OTHERWISE OBTAINED THROUGH THE PLATFORM ARE DONE ENTIRELY AT
-            HIS/HER OWN DISCRETION AND RISK, AND HE/SHE WILL BE SOLELY
-            RESPONSIBLE FOR ANY DAMAGE TO HIS/HER COMPUTER SYSTEMS OR LOSS OF
-            DATA THAT RESULTS FROM THE DOWNLOAD OF SUCH MATERIAL OR DATA.
+            This privacy policy (the "PRIVACY POLICY") applies to your use of
+            the website of vyaparkhata hosted at vyaparkhata.com, the Services
+            (as defined under the vyaparkhata "Terms of Use") and vyaparkhata
+            applications on mobile platforms (Android, Blackberry, Windows
+            Phone, iOS etc.) (collectively ("vyaparkhata" or "WEBSITE")), but
+            does not apply to any third-party websites that may be linked to
+            them, or any relationships you may have with the businesses listed
+            on vyaparkhata . The terms "WE", "OUR" and "US" refer to vyaparkhata
+            and the terms "YOU", "YOUR" and "USER" refer to you, as a user of
+            vyaparkhata. The term "PERSONAL INFORMATION" means information that
+            you provide to us that personally identifies you to be contacted or
+            identified, such as your name, phone number, email address, and any
+            other data that is tied to such information. Our practices and
+            procedures in relation to the collection and use of Personal
+            Information have been set-out below in order to ensure safe usage of
+            the Website for you. We have implemented reasonable security
+            practices and procedures that are commensurate with the information
+            assets being protected and with the nature of our business. While we
+            try our best to provide security that is better than the industry
+            standards, because of the inherent vulnerabilities of the internet,
+            we cannot ensure or warrant complete security of all information
+            that is being transmitted to us by you. By visiting this Website,
+            you agree and acknowledge to be bound by this Privacy Policy and you
+            hereby consent that we will collect, use, process and share your
+            Personal Information in the manner set out hereinbelow. If you do
+            not agree with these terms, do not use the Website. It is clarified
+            that the terms and conditions that are provided separately, form an
+            integral part of your use of this Website and should be read in
+            conjunction with this Privacy Policy. Information we collect and how
+            we use it We collect, receive and store your Personal Information.
+            If you provide your third-party account credentials ("THIRD PARTY
+            ACCOUNT INFORMATION") to us, you understand that some content and
+            information in those accounts may be transmitted to your account
+            with us if you authorise such transmissions and that Third Party
+            Account Information transmitted to us shall be covered by this
+            Privacy Policy. You may opt to not provide us with certain
+            information, however that will restrict you from registering with us
+            or availing of some of our features and services. We use
+            commercially reasonable efforts to ensure that the collection of
+            Personal Information is limited to that which is necessary to fulfil
+            the purposes identified below. If we use or plan to use your
+            information in a manner different from the purpose for which it is
+            collected, then we will ask you for your consent prior to such use.
+            The Personal Information collected will be used only for the purpose
+            of enabling you to use the services provided by us, to help promote
+            a safe service, calibrate consumer interest in our products and
+            services, inform you about online offers and updates, troubleshoot
+            problems, customize User experience, detect and protect us against
+            error, fraud and other criminal activity, collect money, enforce our
+            terms and conditions, and as otherwise described to you at the time
+            of collection of such information. Account information If you create
+            an account to take advantage of the full range of services offered
+            on vyaparkhata, we ask for and record Personal Information such as
+            your name, email address and mobile number. We may collect and store
+            your Sensitive Personal Data or Information (such as any financial
+            information including inter alia credit card, debit card details,
+            bank account and know your customer ("KYC") documents as per RBI
+            regulations and any other information as may be applicable) that the
+            User may opt to save in the User account created with vyaparkhata].
+            We use your email address to send you updates, news, and newsletters
+            (if you willingly subscribe to the newsletter during signup, or
+            anytime after signup) and contact you on behalf of other Users (such
+            other Users who send you friend requests, personal messages, or
+            other social collaboration based events). [If you do not want to
+            receive communications from us that are not relevant to you or your
+            use of our services, please click on the unsubscribe link provided
+            at the bottom of such emails sent to you by us. We use your mobile
+            numbers to send you transaction alerts and SMS alerts based on your
+            preferences. If you do not wish to receive such SMSs from us, please
+            notify us at support@vyaparkhata.com to stop receiving SMSs from us.
+            vyaparkhata assures that your Personal Information will not be made
+            public or sold to any third party. The User shall have an option to
+            erase any information provided by the User including Personal
+            Information. If a User opts for the said option of erasure,
+            vyaparkhata shall delete all stored information of the User from its
+            servers. We also store customer information of customers making
+            payments through vyaparkhata. However, only when customer chooses to
+            share the information on the businesses powered with vyaparkhata
+            applications we share the information to respective businesses.
+            However, vyaparkhata is not liable in any way for any misuse of this
+            information by the business or people related to the businesses to
+            whom the information is shared by the customer. Feedback If you
+            contact us to provide feedback, register a complaint, or ask a
+            question, we will record any Personal Information and other content
+            that you provide in your communication so that we can effectively
+            respond to your communication. Activity We record information
+            relating to your use of vyaparkhata, such as the searches you
+            undertake, the pages you view, your browser type, IP address,
+            location, requested URL, referring URL, and timestamp information.
+            We use this type of information to administer vyaparkhata and
+            provide the highest possible level of security and service to you.
+            We also use this information in the aggregate to perform statistical
+            analyses of User behavior and characteristics in order to measure
+            interest in and use of the various areas of vyaparkhata. However,
+            you cannot be identified from this aggregate information. We own all
+            the intellectual property rights associated with the Website and its
+            contents. No right, title or interest in any downloaded material is
+            transferred to you as a result of any such downloading or copying.
+            The Website is protected by copyright as a collective work and/ or
+            compilation (meaning the collection, arrangement, and assembly) of
+            all the content on this Website, pursuant to applicable law. Our
+            logos, product and service marks and/ or names, trademarks,
+            copyrights and other intellectual property, whether registered or
+            not ("OUR IP") are exclusively owned by us. Without our prior
+            written permission, you agree to not display and/ or use Our IP in
+            any manner. Nothing contained in this Website or the content, should
+            be construed as granting, in any way to the User, any license or
+            right or interest whatsoever, in and/ or to Our IP, without our
+            express written permission. Cookies We send cookies to your computer
+            in order to uniquely identify your browser and improve the quality
+            of our service. The term "cookies" refers to small pieces of
+            information that a website sends to your computer's hard drive while
+            you are viewing the site. We may use both session cookies (which
+            expire once you close your browser) and persistent cookies (which
+            stay on your computer until you delete them). Persistent cookies can
+            be removed by following your browser help file directions. If you
+            choose to disable cookies, some areas of vyaparkhata may not work
+            properly or at all. vyaparkhata uses third party tools, who may
+            collect anonymous information about your visits to vyaparkhata using
+            cookies, and interaction with vyaparkhata products and services.
+            Such third parties may also use information about your visits to
+            vyaparkhata products and services and other web sites to target
+            advertisements for vyaparkhata's products and services. No Personal
+            Information is collected or used in this process. These third
+            parties do not know or have access to the name, phone number,
+            address, email address, or any Personal Information about
+            vyaparkhata's Users. vyaparkhata Users can opt-out of sharing this
+            information with third parties by deactivating cookies, the process
+            of which varies from browser to browser. Please refer to the help
+            file of your browser to understand the process of deactivating
+            cookies on your browser. Enforcement We may use the information we
+            collect in connection with your use of vyaparkhata (including your
+            Personal Information) in order to investigate, enforce, and apply
+            our terms and conditions and Privacy Policy. Transfer of information
+            We do not share your Personal Information with any third party apart
+            from financial institutions such as banks, RBI or other regulatory
+            agencies (as may be required) and to provide you with services that
+            we offer through vyaparkhata, conduct quality assurance testing,
+            facilitate creation of accounts, provide technical and customer
+            support, or provide specific services, such as synchronization of
+            your contacts with other software applications, in accordance with
+            your instructions. These third parties are required not to use your
+            Personal Information other than to provide the services requested by
+            you. We may share your Personal Information with our parent company,
+            subsidiaries, joint ventures, or other companies under a common
+            control (collectively, the "AFFILIATES") that we may have now or in
+            the future, in which case we will require them to honor this Privacy
+            Policy. If another company acquires our company or our assets, that
+            company will possess your Personal Information, and will assume the
+            rights and obligations with respect to that information as described
+            in this Privacy Policy. We may disclose your Personal Information to
+            third parties in a good faith belief that such disclosure is
+            reasonably necessary to (a) take action regarding suspected illegal
+            activities; (b) enforce or apply our terms and conditions and
+            Privacy Policy; (c) comply with legal process, such as a search
+            warrant, subpoena, statute, or court order; or (d) protect our
+            rights, reputation, and property, or that of our Users, Affiliates,
+            or the public. Please note that we are not required to question or
+            contest the validity of any search warrant, subpoena or other
+            similar governmental requests that we receive. We may disclose
+            information in the aggregate to third parties relating to User
+            behavior in connection with actual or prospective business
+            relationship with those third parties, such as advertisers and
+            content distributors. For example, we may disclose the number of
+            Users that have been exposed to, or clicked on, advertising banners.
+            Links References on this Website to any names, marks, products or
+            services of third parties or hyperlinks to third party websites or
+            information are provided solely for your convenience and do not in
+            any way constitute or imply our endorsement, sponsorship or
+            recommendation of the third party, information, product or service.
+            Except as set forth herein, we do not share your Personal
+            Information with those third parties, and are not responsible for
+            their privacy practices. We suggest you read the privacy policies on
+            all such third party websites. User access of Personal Information
+            As a registered vyaparkhata User, you can modify some of your
+            Personal Information and your privacy preferences by accessing the
+            "Account" section of this Website. Security Your account is password
+            protected. We use industry-standard measures to protect the Personal
+            Information that is stored in our database. We limit the access to
+            your Personal Information to those employees and contractors who
+            need access to perform their job functions, such as our customer
+            service personnel. If you have any questions about the security on
+            vyaparkhata, please contact us at support@vyaparkhata.com You hereby
+            acknowledge that vyaparkhata is not responsible for any intercepted
+            information sent via the internet, and you hereby release us from
+            any and all claims arising out of or related to the use of
+            intercepted information in any unauthorized manner. Terms and
+            modifications to this Privacy Policy Our Privacy Policy is subject
+            to change at any time without notice. To make sure you are aware of
+            any changes, please review this policy periodically. These changes
+            will be effective immediately on the Users of vyaparkhata. Please
+            note that at all times you are responsible for updating your
+            Personal Information, including providing us with your most current
+            email address. If you do not wish to permit changes in our use of
+            your Personal Information, you must notify us promptly that you wish
+            to deactivate your account with us. Continued use of vyaparkhata
+            after any change/ amendment to this Privacy Policy shall indicate
+            your acknowledgement of such changes and agreement to be bound by
+            the terms and conditions of such changes. Applicable law Your use of
+            this Website will be governed by and construed in accordance with
+            the laws of India. The Users agree that any legal action or
+            proceedings arising out of your use may be brought exclusively in
+            the competent courts/ tribunals having jurisdiction in Bengaluru in
+            India and irrevocably submit themselves to the jurisdiction of such
+            courts/ tribunals. Complaints and Grievance Redressal Any complaints
+            or concerns in relation to your Personal Information or content of
+            this Website or any dispute or breach of confidentiality or any
+            proprietary rights of User during use of the Website or any
+            intellectual property of any User should be immediately informed to
+            the Grievance cum Nodal Officer at the co-ordinates mentioned below
+            in writing or by way of raising a grievance ticket through the email
+            mentioned below: support@vyaparkhata.com
           </p>
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
@@ -1114,6 +1257,141 @@ const Footer = () => {
     );
   }
 
+  // Cancellation Refund
+  function CancellationRefund(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+          Refunds and cancellation
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            UPI Transactions UPI Transactions cannot be cancelled after
+            initiating the transaction. If the User has entered the wrong
+            number/VPA ID, then the Company is not a liable party in the
+            transaction. All UPI transactions are real-time and if there is any
+            delay at the end of the transaction then the User can check with the
+            support team of vyaparkhata support@vyaparkhata.com after a 30 mins
+            cool period. Debit/Credit Card/net banking Transactions If the User
+            has any issues related to transactions linked with a Debit/Credit
+            card, then the User must report the same to the Company’s call
+            centre at 9953252340 or via mail at support@vyaparkhata.com The
+            Company will respond and try to resolve the issue in the given
+            escalation matrix as per the Company’s internal processes and
+            policies. All refunds will be processed by following the validation
+            of the transaction from case to case basis in the given legal
+            framework The escalation matrix remains the same for the
+            Refunds/Cancellation for all the transactions. Refunds will be
+            processed within 5-7 working days.
+          </p>
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
+    );
+  }
+
+  // Disclaimer Policy
+  function DisclaimerPolicy(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Disclaimer Policy
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            We keep the Application and Website (together referred to as
+            “Platform”) up and running and free of annoyances. But we make no
+            promises that we will succeed. THE COMPANY IS PROVIDED “AS IS” AND
+            “AS AVAILABLE” BASIS AND TO THE EXTENT PERMITTED BY LAW WITHOUT
+            WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT
+            NOT LIMITED TO, IMPLIED WARRANTIES FOR A PARTICULAR PURPOSE, TITLE,
+            AND NON-INFRINGEMENT. IN ADDITION, WHILE THE COMPANY ATTEMPTS TO
+            PROVIDE A GOOD USER EXPERIENCE, WE DO NOT REPRESENT OR WARRANT THAT:
+            (A) THE PLATFORM WILL ALWAYS BE SECURE AND ERROR- FREE, (B) THE
+            PLATFORM WILL ALWAYS FUNCTION WITHOUT DELAYS, DISRUPTIONS, OR
+            IMPERFECTIONS; OR (C) THAT ANY CONTENT, USER CONTENT, OR INFORMATION
+            YOU OBTAIN ON OR THROUGH THE PLATFORM WILL BE TIMELY OR ACCURATE.
+            YOU UNDERSTAND AND AGREE THAT YOU MAY BE EXPOSED TO CONTENT THAT
+            MIGHT BE OFFENSIVE, ILLEGAL, MISLEADING, OR OTHERWISE INAPPROPRIATE,
+            NONE OF WHICH THE COMPANY WILL BE RESPONSIBLE FOR. THE COMPANY WILL
+            NOT BE RESPONSIBLE FOR ANY DAMAGE SUFFERED BY USERS FROM THE USE OF
+            THE PLATFORM PROVIDED ON THE SERVICES AVAILABLE ON THE PLATFORM OR
+            THE CONTENT ON THIS PLATFORM. THIS INCLUDES BUT IS NOT LIMITED TO
+            LOSS OF REVENUE/DATA RESULTING FROM DELAYS, AS MAY OCCUR BECAUSE OF
+            ANY ACT/OMISSION OF PARTIES. THIS DISCLAIMER OF LIABILITY ALSO
+            APPLIES TO ANY DAMAGES OR INJURY CAUSED BY ANY FAILURE OF
+            PERFORMANCE, ERROR, OMISSION, INTERRUPTION, DELETION, DEFECTS,
+            DELAYS IN OPERATION OR TRANSMISSION, COMPUTER VIRUSES, COMMUNICATION
+            LINE FAILURE, THEFT OR DESTRUCTION OR UNAUTHORIZED ACCESS TO,
+            ALTERATION OF, OR USE OF RECORDS, WHETHER FOR BREACH OF CONTRACT,
+            TORTUOUS BEHAVIOUR, NEGLIGENCE, OR UNDER ANY OTHER CAUSE OF ACTION.
+            THE COMPANY ALSO MAKES IT CLEAR THAT IT SHALL NOT BE HELD LIABLE FOR
+            ANY DAMAGE/HURT/INCONVENIENCE CAUSED TO THE USER THROUGH THE COURSE
+            OF USAGE OF THE PLATFORM AND/OR CONTENT OR AS A RESULT OF THE USERS’
+            ACTIONS. THE COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO
+            THE CONDUCT OF THE USERS. THE CONTENT ON THE PLATFORM ARE INTENDED
+            TO BE SUBJECT TO AVAILABILITY, WITHOUT ANY PROMISES OR GUARANTEES ON
+            THE SAME BY THE COMPANY OR BY THE PLATFORM. WHILE CERTAIN
+            INFORMATION AVAILABLE ON THE PLATFORM IS THE PROPERTY OF THE COMPANY
+            AND THE COMPANY ENDEAVOURS TO KEEP THE SAID INFORMATION UPDATED AND
+            ACCURATE, THE COMPANY SHALL NOT MAKE NO REPRESENTATIONS OR
+            WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ABOUT THE COMPLETENESS,
+            ACCURACY, RELIABILITY, SUITABILITY OR AVAILABILITY WITH RESPECT TO
+            THE PLATFORM OR THE INFORMATION, OR RELATED GRAPHICS CONTAINED ON
+            THE PLATFORM FOR ANY PURPOSE. ANY RELIANCE YOU PLACE ON SUCH
+            INFORMATION IS, THEREFORE STRICTLY AT YOUR OWN RISK. THE COMPANY
+            BEARS NO RESPONSIBILITY WHATSOEVER FOR ANY CONSEQUENCES ARISING FROM
+            THE USE OF THE PLATFORM BY USERS. THE USE OF THE PLATFORM IS THE
+            SOLE RESPONSIBILITY OF THE USER (OR LEGALLY AUTHORISED PERSON ON
+            BEHALF OF THE USER), AND IN CASE OF ANY NEGLIGENCE ON THE PART OF
+            THE USER IN ACTING ON THE SAME SHALL NOT BE CONSTRUED AS IMPOSING
+            ANY LIABILITY, DIRECT OR INDIRECT, ON THE COMPANY/PLATFORM. THE
+            COMPANY SHALL DISCLAIM ALL RESPONSIBILITY AND OWNS NO LIABILITY TO
+            USERS FOR ANY OUTCOME (INCIDENTAL, DIRECT, INDIRECT OR OTHERWISE)
+            FROM THE USE OF THE PLATFORM. IN NO EVENT WILL THE COMPANY BE LIABLE
+            FOR ANY LOSS OR DAMAGE, INCLUDING, WITHOUT LIMITATION, INDIRECT OR
+            CONSEQUENTIAL LOSS OR DAMAGE, OR ANY LOSS OR DAMAGE WHATSOEVER
+            ARISING FROM LOSS OF DATA OR PROFITS ARISING OUT OF, OR IN
+            CONNECTION WITH, THE USE OF THE PLATFORM. THROUGH THIS PLATFORM, YOU
+            ARE ABLE TO LINK TO OTHER PLATFORMS WHICH IS NOT UNDER THE
+            COMPANY&#39;S CONTROL. WE HAVE NO CONTROL OVER THE NATURE, CONTENT
+            AND AVAILABILITY OF THOSE SITES. THE INCLUSION OF ANY LINKS DOES NOT
+            NECESSARILY IMPLY A RECOMMENDATION OR ENDORSE THE VIEWS EXPRESSED
+            WITHIN THEM. EVERY EFFORT IS MADE TO KEEP THE PLATFORM &amp;
+            PLATFORM UP AND RUNNING SMOOTHLY. HOWEVER, THE COMPANY TAKES NO
+            RESPONSIBILITY FOR, AND WILL NOT BE LIABLE FOR, THE PLATFORM BEING
+            TEMPORARILY UNAVAILABLE DUE TO TECHNICAL ISSUES BEYOND OUR CONTROL.
+            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COMPANY WILL
+            HAVE NO LIABILITY RELATED TO USER CONTENT ARISING UNDER INTELLECTUAL
+            PROPERTY RIGHTS, LIBEL, PRIVACY, PUBLICITY, OBSCENITY OR OTHER LAWS.
+            THE PLATFORM ALSO DISCLAIMS ALL LIABILITY WITH RESPECT TO THE
+            MISUSE, LOSS, MODIFICATION OR UNAVAILABILITY OF ANY USER CONTENT.
+            THE USER UNDERSTANDS AND AGREES THAT ANY MATERIAL OR DATA DOWNLOADED
+            OR OTHERWISE OBTAINED THROUGH THE PLATFORM ARE DONE ENTIRELY AT
+            HIS/HER OWN DISCRETION AND RISK, AND HE/SHE WILL BE SOLELY
+            RESPONSIBLE FOR ANY DAMAGE TO HIS/HER COMPUTER SYSTEMS OR LOSS OF
+            DATA THAT RESULTS FROM THE DOWNLOAD OF SUCH MATERIAL OR DATA.
+          </p>
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
+    );
+  }
+
   return (
     <>
       <MyVerticallyCenteredModal
@@ -1121,7 +1399,15 @@ const Footer = () => {
         onHide={() => setModalShow(false)}
       />
 
-    <Terms show={termModal} onHide={() => setTermModal(false)} />
+      <Terms show={termModal} onHide={() => setTermModal(false)} />
+      <CancellationRefund
+        show={refundModal}
+        onHide={() => setRefundModal(false)}
+      />
+      <DisclaimerPolicy
+        show={disclaimerModal}
+        onHide={() => setDisclaimerModal(false)}
+      />
 
       <div className="footer">
         <p className="head">Lorem Ipsum</p>
@@ -1149,7 +1435,19 @@ const Footer = () => {
             </p>
             <p onClick={() => setTermModal(true)} style={{ cursor: "pointer" }}>
               {" "}
-            Terms and Condition{" "}
+              Terms and Condition{" "}
+            </p>
+            <p
+              onClick={() => setRefundModal(true)}
+              style={{ cursor: "pointer" }}
+            >
+              Cancellation and Refund
+            </p>
+            <p
+              onClick={() => setDisclaimerModal(true)}
+              style={{ cursor: "pointer" }}
+            >
+              Disclaimer Policy
             </p>
             <p
               style={{
