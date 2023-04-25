@@ -4,29 +4,33 @@ import axios from "axios";
 import React, { useState } from "react";
 import "../css/SingIn.css";
 import { Alert } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const ForgetPassword = () => {
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const Resetpassword = async (e) => {
     e.preventDefault();
     if (confirmPassword === password) {
       try {
         const { data } = await axios.post(
-          "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/user/reset",
+          "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/user/reset",
           {
             password,
           },
           {
             headers: {
-              token: token,
+              Authorization: `Bearer ${token}`,
             },
           }
         );
         console.log(data);
+        alert('Password is Reset')
+        navigate("/");
       } catch (e) {
         console.log(e);
       }
