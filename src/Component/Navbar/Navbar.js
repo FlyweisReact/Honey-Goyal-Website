@@ -19,7 +19,7 @@ const Navbar = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/admin/sales/all"
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {

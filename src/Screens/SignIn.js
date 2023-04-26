@@ -16,7 +16,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com/:4000/api/v1/web/login",
+        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/web/login",
         { email }
       );
       alert(data.message);
