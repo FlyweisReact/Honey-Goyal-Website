@@ -20,7 +20,7 @@ const Singup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/web/signup",
+        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/signup",
         { email }
       );
       alert(`Your Otp is ${data.details.otp}`);
@@ -38,7 +38,7 @@ const Singup = () => {
       e.preventDefault();
       try {
         const { data } = await axios.post(
-          "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/web/verify",
+          "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/verify",
           { otp }
         );
         alert(data.message);

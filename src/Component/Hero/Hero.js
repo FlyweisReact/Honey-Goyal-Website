@@ -21,7 +21,7 @@ const Hero = () => {
   const getCustomer = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/web/customer"
+        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/customer"
       );
       setCustomer(data);
     } catch (err) {
@@ -32,7 +32,7 @@ const Hero = () => {
   const getSupplier = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/web/supplier"
+        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/supplier"
       );
       setSupllier(data);
     } catch (err) {
@@ -43,7 +43,7 @@ const Hero = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/admin/sales/all"
+        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {

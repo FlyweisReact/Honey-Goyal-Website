@@ -25,7 +25,7 @@ const FreeTrial = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://ec2-65-1-248-95.ap-south-1.compute.amazonaws.com:4000/api/v1/company",
+        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/company",
         { name, email, password, mobile, country, state }
       );
       alert("Account Created Successfully");
