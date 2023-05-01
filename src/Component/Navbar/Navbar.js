@@ -7,6 +7,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
 import arrow from "../../Images/Arrow 1.png";
+import logo from '../../Images/logo1.png'
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -34,7 +35,8 @@ const Navbar = () => {
     <>
       <div className="header">
         <div className="mid">
-          <p>LOGO and Company name</p>
+          {/* <p>LOGO and Company name</p> */}
+          <img src={logo} alt='logo' className="LogoImage" />
           <ul>
             <Dropdown className="dropDownBtn" style={{ marginTop: "0px" }}>
               <Dropdown.Toggle

@@ -7,6 +7,7 @@ import google from "../Images/google.png";
 import apple from "../Images/apple2.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../Images/logo.png'
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +34,10 @@ const SignIn = () => {
       <div className="StartingDiv"></div>
       <div className="bigDiv">
         <div className="signInDiv">
-          <button>LOGO</button>
+          {/* <button>LOGO</button> */}
+          <Link to='/'>
+          <img src={logo} alt='' style={{width : '120px'}}/>
+          </Link>
           <p className="access">
             Sign in <br />
             to access us{" "}

@@ -19,6 +19,10 @@ code {
   padding: 0;
 }
 
+.LogoImage{
+  width: 100px;
+}
+
 .two-sec {
   display: flex;
   width: 90%;

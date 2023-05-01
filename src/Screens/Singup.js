@@ -9,7 +9,8 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../Images/logo.png";
 
 const Singup = () => {
   const navigate = useNavigate();
@@ -95,7 +96,10 @@ const Singup = () => {
       <div className="StartingDiv"></div>
       <div className="bigDiv">
         <div className="signInDiv">
-          <button>LOGO</button>
+          {" "}
+          <Link to="/">
+            <img src={logo} alt="" style={{ width: "120px" }} />
+          </Link>
           <p className="access">
             Sign Up now <br />
             to access us{" "}
@@ -110,7 +114,6 @@ const Singup = () => {
               NEXT
             </button>
           </form>
-
           <p
             style={{ textAlign: "center", fontSize: "1.2rem", marginTop: "2%" }}
           >
