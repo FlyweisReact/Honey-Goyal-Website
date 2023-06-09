@@ -7,7 +7,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
 import arrow from "../../Images/Arrow 1.png";
-import logo from '../../Images/logo1.png'
+import logo from "../../Images/logo1.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Navbar = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/admin/sales/all"
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {
@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className="header">
         <div className="mid">
           {/* <p>LOGO and Company name</p> */}
-          <img src={logo} alt='logo' className="LogoImage" />
+          <img src={logo} alt="logo" className="LogoImage" />
           <ul>
             <Dropdown className="dropDownBtn" style={{ marginTop: "0px" }}>
               <Dropdown.Toggle

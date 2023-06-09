@@ -25,7 +25,7 @@ const FreeTrial = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/company",
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/company",
         { name, email, password, mobile, country, state }
       );
       alert("Account Created Successfully");

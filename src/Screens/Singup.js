@@ -21,7 +21,7 @@ const Singup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/signup",
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/signup",
         { email }
       );
       alert(`Your Otp is ${data.details.otp}`);
@@ -39,7 +39,7 @@ const Singup = () => {
       e.preventDefault();
       try {
         const { data } = await axios.post(
-          "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/verify",
+          "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/verify",
           { otp }
         );
         alert(data.message);

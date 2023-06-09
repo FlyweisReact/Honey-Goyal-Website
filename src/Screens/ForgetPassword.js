@@ -18,7 +18,7 @@ const ForgetPassword = () => {
     if (confirmPassword === password) {
       try {
         const { data } = await axios.post(
-          "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/user/reset",
+          "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/user/reset",
           {
             password,
           },

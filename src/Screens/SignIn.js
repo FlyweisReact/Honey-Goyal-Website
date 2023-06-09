@@ -7,7 +7,7 @@ import google from "../Images/google.png";
 import apple from "../Images/apple2.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../Images/logo.png'
+import logo from "../Images/logo.png";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://lm8vo11nz1.execute-api.ap-south-1.amazonaws.com/dev//api/v1/web/login",
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/login",
         { email }
       );
       alert(data.message);
@@ -25,7 +25,7 @@ const SignIn = () => {
       navigate("/");
     } catch (err) {
       console.log(err);
-      alert(err.response.data.message)
+      alert(err.response.data.message);
     }
   };
 
@@ -35,8 +35,8 @@ const SignIn = () => {
       <div className="bigDiv">
         <div className="signInDiv">
           {/* <button>LOGO</button> */}
-          <Link to='/'>
-          <img src={logo} alt='' style={{width : '120px'}}/>
+          <Link to="/">
+            <img src={logo} alt="" style={{ width: "120px" }} />
           </Link>
           <p className="access">
             Sign in <br />
