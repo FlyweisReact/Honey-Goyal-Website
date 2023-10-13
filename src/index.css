@@ -19,7 +19,7 @@ code {
   padding: 0;
 }
 
-.LogoImage{
+.LogoImage {
   width: 100px;
 }
 
@@ -310,14 +310,14 @@ code {
   margin-top: 80px;
 }
 
-.emptyDiv{
+.emptyDiv {
   height: 100px;
   background-color: #0065fc;
   width: 100%;
   margin-bottom: 1%;
 }
 
-.mailHead{
+.mailHead {
   display: flex;
   gap: 20px;
   margin-left: 5%;
@@ -332,7 +332,7 @@ code {
   width: 40px;
 }
 
-.mailTwo-sec{
+.mailTwo-sec {
   display: flex;
   margin-left: 5%;
   width: 80%;
@@ -340,20 +340,44 @@ code {
   justify-content: space-between;
   margin-top: 3%;
 }
-.mailTwo-sec .empty{
+.mailTwo-sec .empty {
   background-color: #d9d9d9;
-  width: 100px ;
+  width: 100px;
   height: 40px;
-  border-radius:100%;
+  border-radius: 100%;
   margin-top: 10px;
 }
 
-.mailTwo-sec .para{
+.mailTwo-sec .para {
   background-color: #d9d9d9;
   padding: 10px;
   font-weight: 600;
   font-style: italic;
 }
+
+.AboutUs {
+  min-height: 463.25px;
+  width: 900px;
+  max-width: min(100%, 900px);
+  background: #0d53d8;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 70px 70px;
+}
+.AboutUs .Head{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.AboutUs .content{
+  font-size: 20px;
+  font-weight: normal;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .two-sec {
@@ -439,24 +463,24 @@ code {
   .chart-two-sec img {
     width: 400px;
   }
-  .chart-three-sec{
+  .chart-three-sec {
     display: block;
     margin: auto;
   }
-  .chart-three-sec div{
+  .chart-three-sec div {
     display: block;
     width: 100%;
-    
+
     margin: auto;
   }
   .threesec-two {
     display: block;
     margin: auto;
   }
-  .threesec-two .mid{
+  .threesec-two .mid {
     margin-top: 5%;
   }
-  .threesec-two .right{
+  .threesec-two .right {
     margin-top: 2%;
     margin-bottom: 5%;
   }

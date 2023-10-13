@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import img from "../../Images/image 17.png";
-import img1 from "../../Images/Apple.png";
-import img2 from "../../Images/PlayStore.png";
 import img3 from "../../Images/Group 7877.png";
 import { Modal } from "react-bootstrap";
 
@@ -12,6 +10,7 @@ const Footer = () => {
   const [termModal, setTermModal] = useState(false);
   const [refundModal, setRefundModal] = useState(false);
   const [disclaimerModal, setDisclaimerModal] = useState(false);
+  const [portalShow, setPortalShow] = useState(false);
 
   // Privacy Policy
   function MyVerticallyCenteredModal(props) {
@@ -1268,7 +1267,7 @@ const Footer = () => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-          Refunds and cancellation
+            Refunds and cancellation
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -1392,6 +1391,54 @@ const Footer = () => {
     );
   }
 
+  function PortalModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Invoicing Client Portal
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          An "Invoicing Client Portal" is a secure and user-friendly online
+          platform or interface that businesses use to interact with their
+          clients for invoicing and related financial transactions. It
+          streamlines the invoicing process, provides clients with easy access
+          to billing information, and enhances overall communication and
+          transparency between businesses and their clients. Here's a breakdown
+          of the concept:
+          <br />
+          <br />
+          <strong>1. Invoicing Process:</strong>
+          <ul>
+            <li>1. Invoicing Process:</li>
+            <li></li>
+          </ul>
+          <strong></strong>
+          <ul>
+            <li></li>
+          </ul>
+          <strong></strong>
+          <ul>
+            <li></li>
+          </ul>
+          <strong></strong>
+          <ul>
+            <li></li>
+          </ul>
+          <strong></strong>
+          <ul>
+            <li></li>
+          </ul>
+        </Modal.Body>
+      </Modal>
+    );
+  }
   return (
     <>
       <MyVerticallyCenteredModal
@@ -1409,8 +1456,8 @@ const Footer = () => {
         onHide={() => setDisclaimerModal(false)}
       />
 
-      <div className="footer">
-        <p className="head">Lorem Ipsum</p>
+      <div className="footer" id="footer">
+        <p className="head">Vyapar Khata</p>
         <div className="big">
           <div className="first">
             <img src={img} alt="" />
@@ -1418,10 +1465,11 @@ const Footer = () => {
 
           <div className="second">
             <p style={{ fontSize: "1.8rem", fontWeight: "400" }}>Features</p>
-            <p className="dwn">
-              Invoicing Client Portal Estimate Expenses Bills Banking Purchase
-              Orders Online payments Sales orders GST Accounting E - Invoicing
-            </p>
+            <p className="dwn">Invoicing Client Portal</p>
+            <p className="dwn">Estimate Expenses Bills</p>
+            <p className="dwn">Online Payments</p>
+            <p className="dwn">Sales Order</p>
+            <p className="dwn">E-Invoicing</p>
           </div>
 
           <div className="third">
@@ -1449,57 +1497,65 @@ const Footer = () => {
             >
               Disclaimer Policy
             </p>
-            <p
-              style={{
-                textAlign: "center",
-                marginTop: "10px",
-                marginBottom: "20px",
-              }}
-            >
-              Find us on :
-            </p>
-
-            <img src={img1} alt="" style={{ width: "400px" }} />
-            <br />
-            <img src={img2} alt="" style={{ width: "400px" }} />
           </div>
           <div>
             <img src={img3} alt="" />
             <p
               style={{
-                textAlign: "center",
-                marginTop: "10px",
-                marginBottom: "20px",
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                textAlign: "left",
               }}
+              className="mt-3"
             >
-              Or
+              FIN-LOOP BUSINESS SOLUTIONS PRIVATE LIMITED
             </p>
             <p
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "400",
-                textAlign: "center",
+                textAlign: "left",
               }}
+              className="mt-3"
             >
-              Contact us :1234-1234567
+              REG ADD.-A-114 GULAB BAGH UTTAM NAGAR NEW DELHI 110059
             </p>
             <p
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "400",
-                textAlign: "center",
+                textAlign: "left",
               }}
+              className="mt-3"
             >
-              1234-1234567
+              Contact us :9289080682
             </p>
             <p
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "400",
-                textAlign: "center",
+                textAlign: "left",
               }}
             >
-              1234-1234567
+              Email Address- support@vyaparkhata.com
+            </p>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                textAlign: "left",
+              }}
+            >
+              contact@vyaparkhata.com
+            </p>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                textAlign: "left",
+              }}
+            >
+              CIN no-U72200DL2022PTC397716
             </p>
           </div>
         </div>

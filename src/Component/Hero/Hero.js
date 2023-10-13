@@ -13,7 +13,6 @@ import axios from "axios";
 
 const Hero = () => {
   const navigate = useNavigate();
-
   const [customer, setCustomer] = useState([]);
   const [supplier, setSupllier] = useState([]);
   const [sales, setSales] = useState([]);
@@ -21,9 +20,10 @@ const Hero = () => {
   const getCustomer = async () => {
     try {
       const { data } = await axios.get(
-        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/customer"
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/web/customer"
       );
       setCustomer(data);
+      console.log(data)
     } catch (err) {
       console.log(err);
     }
@@ -32,7 +32,7 @@ const Hero = () => {
   const getSupplier = async () => {
     try {
       const { data } = await axios.get(
-        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/supplier"
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/web/supplier"
       );
       setSupllier(data);
     } catch (err) {
@@ -43,7 +43,7 @@ const Hero = () => {
   const getSales = async () => {
     try {
       const { data } = await axios.get(
-        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/admin/sales/all"
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/admin/sales/all"
       );
       setSales(data);
     } catch (err) {
@@ -63,7 +63,7 @@ const Hero = () => {
         <div className="first">
           <div>
             <p>
-              Call us @ 1800-1234567 <br />
+              Call us @ 9289080682 <br />
               <span style={{ fontSize: "1rem", fontWeight: "lighter" }}>
                 Mon - Fri 9:00 AM - 7:00 PM
               </span>

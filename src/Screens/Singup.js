@@ -2,32 +2,34 @@
 
 import React, { useState } from "react";
 import "../css/SingIn.css";
-import facebook from "../Images/facebook.png";
-import google from "../Images/google.png";
-import apple from "../Images/apple2.png";
+// import facebook from "../Images/facebook.png";
+// import google from "../Images/google.png";
+// import apple from "../Images/apple2.png";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../Images/logo.png";
+import { toast } from "react-toastify";
 
 const Singup = () => {
   const navigate = useNavigate();
   const [modalShow, setModalShow] = React.useState(false);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(null);
+  const [ password,setPassword ] = useState(null)
 
   const SignUp = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/signup",
-        { email }
+        "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/users/signup",
+        { email , password }
       );
-      alert(`Your Otp is ${data.details.otp}`);
-      setModalShow(true);
+      toast.success("Profile Created !")
+      navigate("/signIn");
     } catch (err) {
-      alert(err.response.data.message);
+      toast.error(err.response.data.message);
     }
   };
 
@@ -39,7 +41,7 @@ const Singup = () => {
       e.preventDefault();
       try {
         const { data } = await axios.post(
-          "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app//api/v1/web/verify",
+          "https://mr-hunny-goel-new-backend-main-ftv5.vercel.app/api/v1/web/verify",
           { otp }
         );
         alert(data.message);
@@ -106,15 +108,21 @@ const Singup = () => {
           </p>
           <form onSubmit={SignUp}>
             <input
-              type="text"
+              type="email"
+              required
               placeholder="Enter your  Email Address"
               onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Enter your  Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button className="signinBtn" type="submit">
               NEXT
             </button>
           </form>
-          <p
+          {/* <p
             style={{ textAlign: "center", fontSize: "1.2rem", marginTop: "2%" }}
           >
             OR
@@ -126,7 +134,7 @@ const Singup = () => {
             <img src={facebook} alt="" />
             <img src={google} alt="" />
             <img src={apple} alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
